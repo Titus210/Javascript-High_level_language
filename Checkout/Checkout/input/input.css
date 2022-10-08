@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.productInputs {
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #000;
+  width: max-content;
+  position: relative;
+  top: 200px;
+  background-color: rgb(222, 171, 153);
+  border-radius: 12px;
+}
+input[type="text"] {
+  margin: 9px 6px;
+}
+
+select {
+  width: 97%;
+  padding: 4px;
+  margin: 7px;
+  position: relative;
+}
+input[type="submit"] {
+  position: relative;
+  left: 50%;
+  margin: 7px 3px;
+}

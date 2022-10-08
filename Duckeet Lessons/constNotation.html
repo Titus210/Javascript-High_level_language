@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using constructor notation</title>
+</head>
+<h1 id="hotelName"></h1>
+<h2 id="availability"></h2>
+
+<body>
+    <script>
+        function Hotel(name, rooms, bookings) {
+
+            this.name = name;
+            this.rooms = rooms;
+            this.bookings = bookings;
+            this.checkAvailability = function () {
+                return this.rooms - this.bookings;
+            };
+        }
+        var hotelNames = new Hotel("Parks", 18, 12);
+        hotelName = document.getElementById("hotelName");
+        availability = document.getElementById("availability");
+        hotelName.textContent = hotelNames.name;
+        availability.textContent = hotelNames.checkAvailability();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Function</title>
+</head>
+
+<body>
+    <h1>TravelWorthy</h1>
+    <div id="message">
+        Welcome to our site
+    </div>
+    <script>
+        /* Function to update message text */
+        var message = "Sign Up to receive 100% off!";
+        function updateMessage() {
+
+            var el = document.getElementById("message");
+            el.textContent = message;
+
+        }
+        updateMessage();
+
+    </script>
+</body>
+
+</html>

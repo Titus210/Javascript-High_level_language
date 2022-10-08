@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Input</title>
+    <link rel="stylesheet" href="../input/input.css">
+</head>
+
+<body>
+
+
+
+    <div class="productInputs">
+        <div class="name">
+            <input type="text" name="First Name" placeholder="John" id="fName">
+            <input type="text" name="Seccond name" placeholder="Doe" id="sName">
+
+        </div>
+        <div class="prod_watch">
+            <select name="watches" id="watches">
+                <option value="rolex" item_name="rolex">Rolex</option>
+                <option value="Gemius" item_name="gemius">Gemius</option>
+                <option value="quartz " item_name="quartz">Quartz</option>
+                <option value="casio" item_name="casio">Casio</option>
+                <option value="oraimo" item_name="oraimo">Oraimo</option>
+            </select>
+        </div>
+        <div class="user_location">
+            <select name="location" id="users_location">
+                <option value="nakuru" location_name="nakuru">Nakuru</option>
+                <option value="nairobi" location_name="nairobi">Nairobi</option>
+                <option value="kisumu" location_name="kisumu">Kisumu</option>
+                <option value="eldoret" location_name="eldoret">Eldoret</option>
+                <option value="kitale" location_name="kitale">Kitale</option>
+            </select>
+            <div class="quantity">
+                <h3 item_quantity="quantity"></h3>
+            </div>
+        </div>
+        <div class="submit">
+            <input type="submit" value="submit" onClick="inputValue()">
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Javascript-->
+    <script src="../checkout/checkout.js"></script>
+</body>
+
+</html>
