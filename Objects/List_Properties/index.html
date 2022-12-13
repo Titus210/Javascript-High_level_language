@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background:rgb(192, 192, 224);
+        }
+
+        #form{
+            position: absolute;
+            transform: translate(50%, 50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30%;
+            background:rgb(90, 120, 76);
+            height: auto;
+        }
+
+        form {
+            padding: 12px;
+            
+        }
+        form label{
+            display: flex;
+            color: rgb(19, 21, 23);
+            margin:2px;
+        }
+        .submit {
+            margin: 0 auto;
+            width:30%;
+        }
+
+        .submit button {
+            background-color: rgb(9, 99, 255);
+            border: none;
+            padding:4px 12px;
+            border-radius: 6px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form">
+        <div class="form-content">
+            <form action="">
+                <label for="fname">First Name</label>
+                <input type="text">
+                <label for="sname">Second Name</label>
+                <input type="text">
+                <label for="Course">Course Details</label>
+                <input type="text">
+                <label for="date">Date Enrolled</label>
+                <input type="text">
+               
+            </form>
+            <div class="submit">
+                <button type="submit">Submit</button>
+            </div>
+           
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
