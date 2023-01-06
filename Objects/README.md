@@ -68,4 +68,43 @@ We can perform deletion operation on object property using delete keyword <br/>
  ```
 
 ### Computated properties
+This is using square brackets on onject literal when creating an object.
+
+
+### Property names limitations
+We can use reserved keyword in naming propertie i.e :
+```
+    let user = {
+        for:"name",
+        if: "name",
+    }
+```
+Reading non existing properties returns uundefined. We can check using `in ` operation 
+i.e:
+```
+    if (key in object)
+        return true;
+    else
+        return false;
+
+// alternative
+    if (user.object_property == undefined)
+        return true;
+    else
+        return false;
+```
+### Loop through objects
+We use `for ... in` to iterate over an object
+i.e:
+```
+    let user ={
+        name: "John",
+        meal: "Vegetarian"
+    }
+    for (let key in user)
+        console.log(key)
+```
+If we iterate over an object with integer property name it returns it in ordered form
+
+
 
