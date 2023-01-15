@@ -22,3 +22,11 @@ function isEquivalent(a, b) {
 console.log(isEquivalent({ "h1": 12 }, { "h1": 12 }))  // true
 console.log(isEquivalent({ "h1": 12 }, { "h1": 22 })) // false
 
+var obj1 = { 'prop1': 'test', 'prop2': function () { } };
+var obj2 = { 'prop1': 'test', 'prop2': function () { } };
+
+isEquivalent(obj1, obj2); // returns false
+
+ var function1 = function () { console.log(2) };
+var function2 = function () { console.log(2) };
+console.log(function1 == function2); // prints 'false'
