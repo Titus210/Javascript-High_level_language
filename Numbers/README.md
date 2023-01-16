@@ -61,5 +61,6 @@ Using this to evaluate we get __time complexity__ of <br/>
 
 ### Prime Factorization
 This is the process of determining prime numbers multiply to a given number <br/>
-Prime Factorization are usefull basis of encryption and hashing.<br/>
-
+Prime Factorization are useful basis of encryption and hashing.<br/>
+__Time Complexity__ : (sqrt(n)) <br/>
+This algorithm works by printing any number divisible by i without a remainder.
