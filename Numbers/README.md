@@ -64,3 +64,18 @@ This is the process of determining prime numbers multiply to a given number <br/
 Prime Factorization are useful basis of encryption and hashing.<br/>
 __Time Complexity__ : (sqrt(n)) <br/>
 This algorithm works by printing any number divisible by i without a remainder.
+
+### Random Number Generator
+This is a important to simulate conditions in real-life situations. <br/>
+In Javascript  We use `Math.random` which returns float between `0` and `1`. <br/>
+To get floating points higher than 1, multiply `Math.random()` by range, add and subtract by its base <br/>
+i.e
+```
+    Math.random() * 100 // floats between 0 and 100
+    Math.random() * 25 + 5 // floats between 5 and 30
+    Math.random() * 10 - 100 // floats between -100 and -90
+
+    Math.floor(Math.random() * 100); // integer between 0 and 99
+    Math.round(Math.random() * 25) + 5; // integer between 5 and 30
+    Math.ceil(Math.random() * 10) - 100; // integer between -100 and -90
+```
