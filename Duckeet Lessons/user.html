@@ -72,9 +72,7 @@
     <div class="name-wrapper">
 
         <div class="name">
-
             <h1 id="username">Hello User click the button to change your name</h1>
-
         </div>
         <button>Change User</button>
     </div>
@@ -89,10 +87,15 @@
         myButton.addEventListener("click", function () {
             // ask users name
             myName = prompt("Enter Your name");
+            if (myName == null) {
+                alert("Please enter your name");
+                myName = myName = prompt("Enter Your name");
+            } else {
+                // store name in local storage
+                localStorage.setItem("name", myName);
+                userName.textContent = `Hello ${myName} welcome!`;
+            }
 
-            // store name in local storage
-            localStorage.setItem("name", myName);
-            userName.textContent = `Hello ${myName} welcome!`;
         });
     </script>
 </body>
