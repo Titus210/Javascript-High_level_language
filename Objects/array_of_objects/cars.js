@@ -58,11 +58,11 @@ cars.push(volvo);
      */
 
 
-let mazda ={
+let mazda = {
     "colors": "Blue",
     "type": "Mazda",
     "registration": new Date("2018-7-8"),
-    capacity : 4
+    capacity: 4
 }
 
 
@@ -80,3 +80,64 @@ console.log(`The cars with color blue is \n${car_color}`)
 /* Filter car */
 let car_capacity = cars.filter(car => car.capacity === 4)
 console.log(`The cars with capacity of 4 is \n${car_capacity}`)
+
+
+
+/*  Tranform objects to array */
+// We  use array.map
+let sizes = cars.map(car => {
+    if (car.capacity <= 3)
+        return "Small"
+
+    if (car.capacity <= 5)
+        return "Medium"
+    return "Large"
+}
+)
+
+console.log(sizes)
+
+let carProperties = cars.map(car => {
+    let properties = car.properties = {
+        "capacity": car.capacity,
+        "size": "large"
+    };
+
+    if (car.capacity <= 5)
+        properties['size'] = "medium"
+
+    if (car.capacity <= 3)
+        properties['capacity'] = "small"
+
+    return properties
+})
+
+console.log(carProperties)
+
+/* Add property to properties to every object */
+cars.forEach(car => {
+    car['size'] = "large"
+    if (car.capacity <= 5)
+        car['size'] = "medium"
+    if (car.capacity <= 3)
+        car['size'] = "small"
+})
+
+
+console.log(cars)
+
+
+/* Sort array by a property */
+// we use Array.sort
+
+let sortedCars = cars.sort((c1, c2) => (
+    c1.capacity < c2.capacity));
+
+console.log(sortedCars)
+
+/* Check if object in array fulfils condition */
+// We use Array.every Array.some
+
+console.log(cars.some(car => car.colors == 'yellow' && car.type == "volvo"))
+console.log(cars.every(car => car.capacity >= 2));
+ 
