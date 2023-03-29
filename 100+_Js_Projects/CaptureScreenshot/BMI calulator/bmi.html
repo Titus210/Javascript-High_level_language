@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+
+            background: rgb(242, 230, 230)
+        }
+
+        .main-wrapper {
+            background-color: #bbadbb;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-wrapper h2 {
+            font-size: 1.6rem;
+            text-align: center;
+            color: rgb(11, 13, 12);
+        }
+
+        .main-wrapper p {
+            color: rgb(255, 255, 255);
+            font-size: 1.2em;
+        }
+
+        .main-wrapper p span {
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        .main-wrapper .form {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .main-wrapper .form input {
+            padding: 8px;
+            width: 50%;
+        }
+
+        .main-wrapper button {
+            background-color: rgb(208, 17, 225);
+            padding: 12px;
+            width: 70%;
+            margin-top: 12px;
+            border: none;
+            color: #fff;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <h2>BMI calulator</h2>
+        <p>This BMI calculator calculates Body mass index of two individuals and compares them
+        </p>
+        <h3>Enter the mass of the two individuals</h3>
+        <div class="form">
+            <label for=""></label>
+            <input type="text" class="text" id="person_1_mass" name="person1">
+            <input type="text" name="" id="person_2_mass">
+        </div>
+        <h3>Enter the height of the two individuals</h3>
+        <div class="form">
+            <label for=""></label>
+            <input type="text" class="text" id="person_1_height" name="person1">
+            <input type="text" name="" id="person_2_height">
+        </div>
+        <button id="submit">Submit</button>
+    </div>
+
+    <script src="./bmi.js"></script>
+</body>
+
+</html>
