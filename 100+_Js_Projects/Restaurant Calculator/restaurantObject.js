@@ -32,8 +32,10 @@ var john = {
 
     }
 }
-
+// run the method for each
 john.tipCalc();
+
+// log the tips
 console.log(tips);
 
 //loop through hotel and make a new list for each hotel
@@ -42,4 +44,5 @@ for (var i = 0; i < hotels.length; i++) {
     bill_tips.push(bill_tip);
 }
 
+// log the bill and tips for each hotel
 console.log(bill_tips);
