@@ -20,3 +20,12 @@ retirement(2002);
 console.log(age); // undefined
 var age = 22;
 console.log(age); //22
+
+
+function foo(){
+    var age = 65; //local
+    console.log(age);
+}
+
+foo();
+console.log(age); // global
