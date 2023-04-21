@@ -22,3 +22,4 @@ for(var i = 1; i <string.length; i++){
 }
 
 console.log(firstChar);
+
