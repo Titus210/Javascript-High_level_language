@@ -6,5 +6,5 @@ function splitString(str){
     newString = str.trim().split(" ");
     console.log(newString);
 }
-splitString("Titus") // [ 'T', 'i', 't', 'u', 's' ]
+splitString("Titus") 
 splitString("Titus Kiplagat"); 
