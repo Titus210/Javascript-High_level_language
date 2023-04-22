@@ -17,3 +17,5 @@ console.log(window.a); // 10
 let b = 10;
 console.log(window.b); // undefined
 ```
+## Redeclaration
+`var` keyword allows redeclaration of variables `let` keyword results to  an error.
