@@ -19,3 +19,8 @@ console.log(window.b); // undefined
 ```
 ## Redeclaration
 `var` keyword allows redeclaration of variables `let` keyword results to  an error.
+
+## hoisting
+Accessing variables before declaring causes a `ReferenceError`.
+
+## Temporal death zone (TDZ)
