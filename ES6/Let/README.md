@@ -24,3 +24,5 @@ console.log(window.b); // undefined
 Accessing variables before declaring causes a `ReferenceError`.
 
 ## Temporal death zone (TDZ)
+Variable declared by `let` keyword has a temporal death zone <br/>
+The TDZ is the time from the start of the block until the variable declaration is processed.
