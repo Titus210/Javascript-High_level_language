@@ -25,4 +25,7 @@ Accessing variables before declaring causes a `ReferenceError`.
 
 ## Temporal death zone (TDZ)
 Variable declared by `let` keyword has a temporal death zone <br/>
-The TDZ is the time from the start of the block until the variable declaration is processed.
+The TDZ is the time from the start of the block until the variable declaration is processed. <br/>
+The temporal death zone prevents you from accidentally referencing a variable before its declaration.
+
+ 
