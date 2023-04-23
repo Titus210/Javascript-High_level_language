@@ -1,7 +1,7 @@
 /* Validate Empty field and Number Field*/
 
-function validateNumber() {
-    if (typeof i === Number) {
+function validateNumber(x) {
+    if (typeof x === 'number') {
         console.log("Number");
     }
     else
@@ -9,7 +9,7 @@ function validateNumber() {
 }
 
 function validateEmpty(x) {
-    if (x === '' || x === undefined || x === null || x === undefined) {
+    if (x === '' || x === undefined || x === null) {
         console.log("The string is empty");
     }
     else {
@@ -17,8 +17,15 @@ function validateEmpty(x) {
     }
 }
 
-validateEmpty('')
-validateEmpty("Titus")
+validateEmpty('')   // The string is empty
+validateEmpty("Titus") // return is not empty
 
 validateNumber("Titus") // returns Not number
-validateNumber(12)
+validateNumber(12)      // returns number
+
+
+console.log(2 == "2")
+console.log(2 === "2")
+
+
+console.log(typeof 4)
