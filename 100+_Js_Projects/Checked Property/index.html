@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked property</title>
+</head>
+
+<body>
+    <label for="my-checkbox">subcribe</label>
+    <input type="checkbox" id="my-checkbox"> <br />
+    <button id="my-button"> Submit </button>
+
+    <!-- javascript-->
+    <script>
+        document.getElementById("my-button").onclick = function () {
+            // check if user has checked the check box
+            if (document.getElementById("my-checkbox").checked) {
+                alert("Subscribed")
+            }
+            else {
+                alert("Check the button to continue");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
