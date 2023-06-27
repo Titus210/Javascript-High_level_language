@@ -10,18 +10,46 @@
 <body>
     <label for="my-checkbox">subcribe</label>
     <input type="checkbox" id="my-checkbox"> <br />
+   
+    <label for="visaBtn"> Visa</label>
+    <input type="radio" name="card" id="visaBtn">
+    <label for="masterCardBtn"> MasterCard</label>
+    <input type="radio" name="card" id="masterCardBtn">
+    <label for="paypalBtn"> Paypal</label>
+    <input type="radio" name="card" id="paypalBtn">
+    <br />
     <button id="my-button"> Submit </button>
 
     <!-- javascript-->
     <script>
         document.getElementById("my-button").onclick = function () {
+
+
+            var checkbox = document.getElementById("my-checkbox");
+
+            const VISA_BTN = document.getElementById("visaBtn")
+            const MASTERCARD_BTN = document.getElementById("masterCardBtn")
+            const PAYPAL_BTN = document.getElementById("paypalBtn")
+
             // check if user has checked the check box
-            var checkbox = document.getElementById("my-checkbox")
             if (checkbox.checked) {
                 alert("Subscribed")
             }
             else {
                 alert("Check the button to continue");
+            }
+
+            if(VISA_BTN.checked){
+                alert("We are processing your visa payment")
+            }
+            else if(MASTERCARD_BTN.checked){
+                alert("We are processing your mastercard payment")
+            }
+            else if (PAYPAL_BTN.checked){
+                alert("We are processing your paypal payment")
+            }
+            else{
+                alert("Select a payment method")
             }
         }
 
