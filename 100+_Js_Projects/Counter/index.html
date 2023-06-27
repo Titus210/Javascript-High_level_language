@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Program</title>
+
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .flex-row {
+            flex-direction: row;
+        }
+
+        .error {
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-col">
+        <p id="number">Value <br /> <span id="value"></span></p>
+        <p class="error" id="error">Can't decrement further</p>
+        <div class="flex-row">
+            <button id="decrement">Decrement</button>
+            <button id="increment">Increment</button>
+        </div>
+    </div>
+
+
+    <!-- Javascript-->
+    <script>
+        var number = document.getElementById('number');
+        var increase_no = document.getElementById('increase-no');
+        var value = document.getElementById('value');
+        var number = 0;
+        var error = document.getElementById('error')
+
+        document.getElementById("increment").onclick = function () {
+            number += 1;
+            value.innerHTML = number
+        }
+        document.getElementById("decrement").onclick = function () {
+            while (number >= 1) {
+                number -= 1;
+                value.innerHTML = number
+            }
+            error.style.display = "flex";
+
+
+
+        }
+    </script>
+</body>
+
+</html>
