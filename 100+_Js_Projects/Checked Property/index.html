@@ -16,7 +16,8 @@
     <script>
         document.getElementById("my-button").onclick = function () {
             // check if user has checked the check box
-            if (document.getElementById("my-checkbox").checked) {
+            var checkbox = document.getElementById("my-checkbox")
+            if (checkbox.checked) {
                 alert("Subscribed")
             }
             else {
