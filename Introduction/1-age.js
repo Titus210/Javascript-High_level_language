@@ -6,4 +6,4 @@ if (age >= 18) {
   console.log("Youre a child");
 }
 let age_2 = 21;
-age_2 >= 18 ? console.log("Youre an adult") : console.log("Youre a child");
+(age_2 >= 18)&& (age_2 > 0) ? console.log("Youre an adult") : console.log("Youre a child");
