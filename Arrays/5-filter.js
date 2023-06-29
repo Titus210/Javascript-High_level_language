@@ -7,4 +7,7 @@ let users=[
 
 let user = users.filter(item=>item.car == 'BMW');
 
+
+
+
 console.log(user)
