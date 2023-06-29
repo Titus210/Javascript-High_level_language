@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing game</title>
+</head>
+
+<body>
+    <h1>Number Guessing Game</h1>
+    <p>Pick a # between 1 and 10</p>
+    <label for="guessField">Enter a guess</label>
+
+    <input type="text" name="" id="guessField">
+    <input type="submit" id="submitButton">
+
+    <script>
+        const ANSWER = Math.floor(Math.random() * 10 + 1);
+        let guess = 0;
+
+        document.getElementById('submitButton').onclick = function () {
+            let guess = document.getElementById('guessField').value;
+            guess+=1;
+
+            if(guess == ANSWER){
+                 alert(`${ANSWER} is the # it took you ${guess} to guess`)
+            }
+            else if (guess < ANSWER){
+                alert("Too small")
+            }
+            else{
+                alert("Too large")
+            }
+        }
+    </script>
+</body>
+
+</html>
