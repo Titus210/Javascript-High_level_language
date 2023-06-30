@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life in a week</title>
+</head>
+
+<body>
+    <h1>Check user remaining </h1>
+    <label for="user-age"></label>
+    <input type="text" id="user-age">
+    <button type="submit" id="check-year">Remaining Time</button>
+    <!-- Javascript -->
+    <script>
+        const DAYS_IN_YEAR = 356;
+        const WEEKS_IN_YEAR = 52;
+        const MONTHS_IN_YEARS = 12;
+        const YEARS_TO_LIVE = 90;
+
+        //  get user age
+
+        document.getElementById('check-year').onclick =
+            function lifeInWeeks() {
+                var user_age = document.getElementById('user-age').value
+                let years_remaining = YEARS_TO_LIVE - user_age;
+
+                let days_remaining;
+                let weeks_remaining;
+                let months_remaining;
+
+                days_remaining = years_remaining * DAYS_IN_YEAR;
+                weeks_remaining = years_remaining * WEEKS_IN_YEAR;
+                months_remaining = years_remaining * MONTHS_IN_YEARS;
+
+                alert(`You have ${days_remaining} days, ${weeks_remaining} weeks and ${years_remaining}months `)
+            }
+    </script>
+</body>
+
+</html>
