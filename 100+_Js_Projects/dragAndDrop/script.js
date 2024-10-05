@@ -1,5 +1,6 @@
 const draggableList = document.getElementById('draggable-list');
 const checkButton = document.getElementById('check');
+const hintButton = document.getElementById('hint'); // New Hint Button
 
 // Predefined correct order of tasks for validation
 const correctOrder = [
@@ -17,6 +18,7 @@ const correctOrder = [
 
 let listItems = [];
 let dragStartIndex;
+let isHintShown = false; // State to track whether hint is displayed
 
 // List of tasks as a simple array (modify this as needed)
 let todoListItems = [
@@ -49,6 +51,7 @@ function createList() {
         <div class="draggable" draggable="true">
           <p class="task-name">${task}</p>
           <i class="fas fa-grip-lines"></i>
+          <span class="hint correct-order" style="display: none;">Correct Order: ${correctOrder[index]}</span> <!-- Hidden by default -->
         </div>
       `;
 
@@ -143,8 +146,27 @@ function checkOrder() {
   });
 }
 
-// Event listener for the check button
+// Show or hide the hint when the hint button is clicked
+function toggleHint() {
+  isHintShown = !isHintShown; // Toggle state
+
+  // Update button text based on the current state
+  hintButton.innerText = isHintShown ? 'Hide Hint' : 'Show Hint';
+
+  // Show or hide the correct order hints based on the state
+  listItems.forEach((listItem) => {
+    const hintElement = listItem.querySelector('.hint');
+    if (isHintShown) {
+      hintElement.style.display = 'block'; // Show hint
+    } else {
+      hintElement.style.display = 'none'; // Hide hint
+    }
+  });
+}
+
+// Event listeners for buttons
 checkButton.addEventListener('click', checkOrder);
+hintButton.addEventListener('click', toggleHint); // Attach hint toggle function to the button
 
 // Initial setup
 loadItemsFromLocalStorage();
