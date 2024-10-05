@@ -24,7 +24,11 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
+   li:hover {
+    background-color: #e3f2fd; 
+  }
+
   li.correct {
     border: 2px solid #4caf50; 
     background-color: #e8f5e9;
@@ -53,10 +57,6 @@ body {
     justify-content: space-between;
     align-items: center;
     transition: background-color 0.3s ease; 
-  }
-  
-  .draggable:hover {
-    background-color: #e3f2fd; 
   }
   
   .number {
