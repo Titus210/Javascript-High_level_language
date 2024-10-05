@@ -1,4 +1,3 @@
-/* Basic styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
@@ -7,7 +6,9 @@ body {
   
   h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+    font-size: 20px;
+    color: #007bff;
   }
   
   ul {
@@ -21,16 +22,24 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   li.correct {
-    border: 2px solid #4caf50; /* Green border */
+    border: 2px solid #4caf50; 
     background-color: #e8f5e9;
   }
   
   li.incorrect {
-    border: 2px solid #f44336; /* Red border */
+    border: 2px solid #f44336; 
     background-color: #ffebee;
+  }
+  
+  /* Hover effect when the card is being dragged */
+  li.over {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #609ba3; 
   }
   
   .hint {
@@ -43,6 +52,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .draggable:hover {
+    background-color: #e3f2fd; 
   }
   
   .number {
@@ -65,5 +79,17 @@ body {
   .check-btn:hover,
   .hint-btn:hover {
     background-color: #0056b3;
+  }
+  
+  /* Add media query for larger screens */
+  @media screen and (min-width: 768px) {
+    body {
+      display: flex;
+      justify-content: center;
+    }
+    main {
+      width: 50%;
+      margin: auto;
+    }
   }
   
