@@ -129,26 +129,34 @@ function loadItemsFromLocalStorage() {
   }
 }
 
-// Check if each item is in the correct position
 function checkOrder() {
-  listItems.forEach((listItem, index) => {
-    const taskName = listItem.querySelector('.task-name').innerText;
-
-    // Remove any existing styles from previous checks
-    listItem.classList.remove('correct', 'incorrect');
-
-    // Check if the current task is in the correct position
-    if (taskName === correctOrder[index]) {
-      listItem.classList.add('correct'); // Apply green background/border
-    } else {
-      listItem.classList.add('incorrect'); // Apply red background/border
+    let allCorrect = true; // Variable to track if all items are in correct position
+  
+    listItems.forEach((listItem, index) => {
+      const taskName = listItem.querySelector('.task-name').innerText;
+  
+      // Remove any existing styles from previous checks
+      listItem.classList.remove('correct', 'incorrect');
+  
+      // Check if the current task is in the correct position
+      if (taskName === correctOrder[index]) {
+        listItem.classList.add('correct'); // Apply green background/border
+      } else {
+        listItem.classList.add('incorrect'); // Apply red background/border
+        allCorrect = false; // Set to false if any item is incorrect
+      }
+    });
+  
+    // Alert message if all items are in the correct position
+    if (allCorrect) {
+      alert("Congratulations! All items are in the correct position.");
     }
-  });
-}
+  }
+  
 
 // Show or hide the hint when the hint button is clicked
 function toggleHint() {
-  isHintShown = !isHintShown; // Toggle state
+  isHintShown = !isHintShown; 
 
   // Update button text based on the current state
   hintButton.innerText = isHintShown ? 'Hide Hint' : 'Show Hint';
